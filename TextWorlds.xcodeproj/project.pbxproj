@@ -12,6 +12,10 @@
 		A32E266A1659B1E2009252F8 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = A32E26671659B1E2009252F8 /* launch.png */; };
 		A32E266B1659B1E2009252F8 /* launch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A32E26681659B1E2009252F8 /* launch@2x.png */; };
 		A32E266E1659B4D1009252F8 /* TWTypingDuel.m in Sources */ = {isa = PBXBuildFile; fileRef = A32E266D1659B4D1009252F8 /* TWTypingDuel.m */; };
+		A32E267D165AAEDC009252F8 /* TWEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = A32E267C165AAEDC009252F8 /* TWEnemy.m */; };
+		A32E2681165AB76A009252F8 /* ninja-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = A32E267F165AB76A009252F8 /* ninja-hd.png */; };
+		A32E2682165AB76A009252F8 /* ninja.png in Resources */ = {isa = PBXBuildFile; fileRef = A32E2680165AB76A009252F8 /* ninja.png */; };
+		A32E2689165AD293009252F8 /* TWWordDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = A32E2688165AD293009252F8 /* TWWordDisplay.m */; };
 		A3A1E3BC16599C7C00EECE7D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A1E3BB16599C7C00EECE7D /* QuartzCore.framework */; };
 		A3A1E3BE16599C7C00EECE7D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A1E3BD16599C7C00EECE7D /* OpenGLES.framework */; };
 		A3A1E3C016599C7C00EECE7D /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A1E3BF16599C7C00EECE7D /* OpenAL.framework */; };
@@ -148,6 +152,12 @@
 		A32E26681659B1E2009252F8 /* launch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "launch@2x.png"; path = "Resources/launch@2x.png"; sourceTree = "<group>"; };
 		A32E266C1659B4D1009252F8 /* TWTypingDuel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTypingDuel.h; sourceTree = "<group>"; };
 		A32E266D1659B4D1009252F8 /* TWTypingDuel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTypingDuel.m; sourceTree = "<group>"; };
+		A32E267B165AAEDC009252F8 /* TWEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWEnemy.h; sourceTree = "<group>"; };
+		A32E267C165AAEDC009252F8 /* TWEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWEnemy.m; sourceTree = "<group>"; };
+		A32E267F165AB76A009252F8 /* ninja-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ninja-hd.png"; sourceTree = "<group>"; };
+		A32E2680165AB76A009252F8 /* ninja.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ninja.png; sourceTree = "<group>"; };
+		A32E2687165AD293009252F8 /* TWWordDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWWordDisplay.h; sourceTree = "<group>"; };
+		A32E2688165AD293009252F8 /* TWWordDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWWordDisplay.m; sourceTree = "<group>"; };
 		A3A1E3B716599C7C00EECE7D /* TextWorlds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextWorlds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A1E3BB16599C7C00EECE7D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A3A1E3BD16599C7C00EECE7D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -432,6 +442,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A32E267E165AAEE4009252F8 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				A32E267B165AAEDC009252F8 /* TWEnemy.h */,
+				A32E267C165AAEDC009252F8 /* TWEnemy.m */,
+				A32E2687165AD293009252F8 /* TWWordDisplay.h */,
+				A32E2688165AD293009252F8 /* TWWordDisplay.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
 		A3A1E3AC16599C7C00EECE7D = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +489,7 @@
 		A3A1E3CD16599C7C00EECE7D /* TextWorlds */ = {
 			isa = PBXGroup;
 			children = (
+				A32E267E165AAEE4009252F8 /* Objects */,
 				A32E266C1659B4D1009252F8 /* TWTypingDuel.h */,
 				A32E266D1659B4D1009252F8 /* TWTypingDuel.m */,
 				A32E265D1659AD03009252F8 /* TWKeyboardControl.m */,
@@ -488,6 +510,8 @@
 		A3A1E3CE16599C7C00EECE7D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A32E267F165AB76A009252F8 /* ninja-hd.png */,
+				A32E2680165AB76A009252F8 /* ninja.png */,
 				A32E26661659B1E2009252F8 /* launch-568h@2x.png */,
 				A32E26671659B1E2009252F8 /* launch.png */,
 				A32E26681659B1E2009252F8 /* launch@2x.png */,
@@ -917,6 +941,8 @@
 				A32E26691659B1E2009252F8 /* launch-568h@2x.png in Resources */,
 				A32E266A1659B1E2009252F8 /* launch.png in Resources */,
 				A32E266B1659B1E2009252F8 /* launch@2x.png in Resources */,
+				A32E2681165AB76A009252F8 /* ninja-hd.png in Resources */,
+				A32E2682165AB76A009252F8 /* ninja.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1033,6 +1059,8 @@
 				A3A1E54D16599C8300EECE7D /* IntroLayer.m in Sources */,
 				A32E265E1659AD03009252F8 /* TWKeyboardControl.m in Sources */,
 				A32E266E1659B4D1009252F8 /* TWTypingDuel.m in Sources */,
+				A32E267D165AAEDC009252F8 /* TWEnemy.m in Sources */,
+				A32E2689165AD293009252F8 /* TWWordDisplay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
