@@ -12,6 +12,7 @@
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
+#import "TWTypingDuel.h"
 
 #pragma mark - HelloWorldLayer
 
@@ -29,9 +30,13 @@
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
-	
+	    
 	// return the scene
 	return scene;
+}
+
+- (void) startgame {
+	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[TWTypingDuel scene] withColor:ccWHITE]];
 }
 
 // on "init" you need to initialize your instance
@@ -42,18 +47,16 @@
 	if( (self=[super init]) ) {
 		
 		// create and initialize a Label
-		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];
+		CCLabelTTF *label = [CCLabelTTF labelWithString:@"TypingDuels" fontName:@"Chalkduster" fontSize:46];
 
 		// ask director for the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
 	
 		// position the label on the center of the screen
-		label.position =  ccp( size.width /2 , size.height/2 );
+		label.position =  ccp( size.width /2 , size.height - 40 );
 		
 		// add the label as a child to this Layer
 		[self addChild: label];
-		
-		
 		
 		//
 		// Leaderboards and Achievements
@@ -61,7 +64,17 @@
 		
 		// Default font size will be 28 points.
 		[CCMenuItemFont setFontSize:28];
-		
+        
+        CCMenuItem *startGame = [CCMenuItemFont itemWithString:@"Start" target:self selector:@selector(startgame)];
+		//startGame.position = ccp(size.width/2, size.height/2);
+		CCMenu *menuOne = [CCMenu menuWithItems:startGame, nil];
+        
+		[menuOne alignItemsHorizontallyWithPadding:20];
+		[menuOne setPosition:ccp( size.width/2, size.height/2)];
+        
+		// Add the menu to the layer
+		[self addChild:menuOne];
+        
 		// Achievement Menu Item using blocks
 		CCMenuItem *itemAchievement = [CCMenuItemFont itemWithString:@"Achievements" block:^(id sender) {
 			
@@ -100,6 +113,11 @@
 		// Add the menu to the layer
 		[self addChild:menu];
 
+        //make sure keyboard is hidden
+        AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
+        [app.keyboard resignFirstResponder];
+        
+        [[NSNotificationCenter defaultCenter]  addObserver:self selector:@selector(handleNotification:) name:@"KeyboardKeyTyped" object:nil];        
 	}
 	return self;
 }
@@ -107,6 +125,8 @@
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
 	// in case you have something to dealloc, do it in this method
 	// in this particular example nothing needs to be released.
 	// cocos2d will automatically release all the children (Label)
@@ -128,4 +148,11 @@
 	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
 	[[app navController] dismissModalViewControllerAnimated:YES];
 }
+
+//handle user keyboard inputs
+- (void) handleNotification:(id)sender
+{
+    
+}
+
 @end

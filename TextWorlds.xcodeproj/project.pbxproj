@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A32E265E1659AD03009252F8 /* TWKeyboardControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A32E265D1659AD03009252F8 /* TWKeyboardControl.m */; };
+		A32E26691659B1E2009252F8 /* launch-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A32E26661659B1E2009252F8 /* launch-568h@2x.png */; };
+		A32E266A1659B1E2009252F8 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = A32E26671659B1E2009252F8 /* launch.png */; };
+		A32E266B1659B1E2009252F8 /* launch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A32E26681659B1E2009252F8 /* launch@2x.png */; };
+		A32E266E1659B4D1009252F8 /* TWTypingDuel.m in Sources */ = {isa = PBXBuildFile; fileRef = A32E266D1659B4D1009252F8 /* TWTypingDuel.m */; };
 		A3A1E3BC16599C7C00EECE7D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A1E3BB16599C7C00EECE7D /* QuartzCore.framework */; };
 		A3A1E3BE16599C7C00EECE7D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A1E3BD16599C7C00EECE7D /* OpenGLES.framework */; };
 		A3A1E3C016599C7C00EECE7D /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A1E3BF16599C7C00EECE7D /* OpenAL.framework */; };
@@ -136,6 +141,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A32E265C1659AD03009252F8 /* TWKeyboardControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWKeyboardControl.h; sourceTree = "<group>"; };
+		A32E265D1659AD03009252F8 /* TWKeyboardControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWKeyboardControl.m; sourceTree = "<group>"; };
+		A32E26661659B1E2009252F8 /* launch-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "launch-568h@2x.png"; path = "Resources/launch-568h@2x.png"; sourceTree = "<group>"; };
+		A32E26671659B1E2009252F8 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launch.png; path = Resources/launch.png; sourceTree = "<group>"; };
+		A32E26681659B1E2009252F8 /* launch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "launch@2x.png"; path = "Resources/launch@2x.png"; sourceTree = "<group>"; };
+		A32E266C1659B4D1009252F8 /* TWTypingDuel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTypingDuel.h; sourceTree = "<group>"; };
+		A32E266D1659B4D1009252F8 /* TWTypingDuel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTypingDuel.m; sourceTree = "<group>"; };
 		A3A1E3B716599C7C00EECE7D /* TextWorlds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextWorlds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A1E3BB16599C7C00EECE7D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A3A1E3BD16599C7C00EECE7D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -456,6 +468,10 @@
 		A3A1E3CD16599C7C00EECE7D /* TextWorlds */ = {
 			isa = PBXGroup;
 			children = (
+				A32E266C1659B4D1009252F8 /* TWTypingDuel.h */,
+				A32E266D1659B4D1009252F8 /* TWTypingDuel.m */,
+				A32E265D1659AD03009252F8 /* TWKeyboardControl.m */,
+				A32E265C1659AD03009252F8 /* TWKeyboardControl.h */,
 				A3A1E54516599C8200EECE7D /* AppDelegate.h */,
 				A3A1E54616599C8200EECE7D /* AppDelegate.m */,
 				A3A1E54816599C8200EECE7D /* HelloWorldLayer.h */,
@@ -472,6 +488,9 @@
 		A3A1E3CE16599C7C00EECE7D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A32E26661659B1E2009252F8 /* launch-568h@2x.png */,
+				A32E26671659B1E2009252F8 /* launch.png */,
+				A32E26681659B1E2009252F8 /* launch@2x.png */,
 				A3A1E3CF16599C7C00EECE7D /* Default.png */,
 				A3A1E3D116599C7C00EECE7D /* Default-Landscape~ipad.png */,
 				A3A1E3D316599C7C00EECE7D /* fps_images.png */,
@@ -895,6 +914,9 @@
 				A3A1E3E416599C7D00EECE7D /* Icon@2x.png in Resources */,
 				A3A1E3E716599C7D00EECE7D /* iTunesArtwork in Resources */,
 				A3A1E52516599C8200EECE7D /* ChangeLog in Resources */,
+				A32E26691659B1E2009252F8 /* launch-568h@2x.png in Resources */,
+				A32E266A1659B1E2009252F8 /* launch.png in Resources */,
+				A32E266B1659B1E2009252F8 /* launch@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1031,8 @@
 				A3A1E54716599C8200EECE7D /* AppDelegate.m in Sources */,
 				A3A1E54A16599C8200EECE7D /* HelloWorldLayer.m in Sources */,
 				A3A1E54D16599C8300EECE7D /* IntroLayer.m in Sources */,
+				A32E265E1659AD03009252F8 /* TWKeyboardControl.m in Sources */,
+				A32E266E1659B4D1009252F8 /* TWTypingDuel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1112,6 +1136,7 @@
 				A3A1E55216599C8300EECE7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

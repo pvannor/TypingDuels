@@ -10,10 +10,12 @@
 
 #import "AppDelegate.h"
 #import "IntroLayer.h"
+#import "TWKeyboardControl.h"
 
 @implementation AppController
 
 @synthesize window=window_, navController=navController_, director=director_;
+@synthesize keyboard = _keyboard;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -87,6 +89,9 @@
 	// make main window visible
 	[window_ makeKeyAndVisible];
 	
+    self.keyboard = [[TWKeyboardControl alloc] init];    
+    [[director_ view] addSubview:self.keyboard];
+    
 	return YES;
 }
 
